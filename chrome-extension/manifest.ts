@@ -41,9 +41,6 @@ const manifest = {
     default_popup: 'popup/index.html',
     default_icon: 'icon-34.png',
   },
-  chrome_url_overrides: {
-    newtab: 'new-tab/index.html',
-  },
   icons: {
     '128': 'icon-128.png',
   },
@@ -78,6 +75,10 @@ const manifest = {
   ],
   side_panel: {
     default_path: 'side-panel/index.html',
+  },
+  content_security_policy: {
+    extension_pages: "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'",
+    sandbox: "sandbox allow-scripts; script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval'; object-src 'self'",
   },
 } satisfies ManifestType;
 
