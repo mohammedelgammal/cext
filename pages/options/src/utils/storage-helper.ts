@@ -11,3 +11,10 @@ export const appendToStorage = (key: string, value: object, callback?: () => voi
     });
   });
 };
+
+export const fetchStorage = async <T>(key: string): Promise<T | null> =>
+  new Promise(resolve => {
+    chrome.storage.local.get([key], (result: { [key: string]: T }) => {
+      resolve(result[key] || null);
+    });
+  });

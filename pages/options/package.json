@@ -25,13 +25,16 @@
     "@extension/storage": "workspace:*",
     "@extension/ui": "workspace:*",
     "bip39": "^3.1.0",
+    "ethers": "^6.15.0",
     "hash-wasm": "^4.12.0",
     "react-router-dom": "^7.9.3"
   },
   "devDependencies": {
     "@extension/tailwindcss-config": "workspace:*",
     "@extension/tsconfig": "workspace:*",
-    "@extension/vite-config": "workspace:*"
+    "@extension/vite-config": "workspace:*",
+    "@solana-program/system": "^0.9.0",
+    "@solana/kit": "^4.0.0"
   },
   "postcss": {
     "plugins": {

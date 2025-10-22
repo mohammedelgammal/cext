@@ -9,9 +9,9 @@ const Options = () => (
   <HashRouter>
     <Routes>
       <Route path={URLS.WELCOME} element={<Welcome />} />
-      {/* <Route path={URLS.CREATE_PASSWORD} element={<CreatePassword />} /> */}
-      <Route path={URLS.REVIEW_SEED_PHRASE} element={<ReviewSeedPhrase />} />
+      <Route path={URLS.REVIEW_SEED_PHRASE} element={<ReviewSeedPhrase acquire={false} />} />
       <Route path={URLS.WALLET} element={<Wallet />} />
+      <Route path={URLS.ACQUIRE_SEED} element={<ReviewSeedPhrase acquire />} />
     </Routes>
   </HashRouter>
 );
